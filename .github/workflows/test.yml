@@ -1,0 +1,20 @@
+name: test
+
+on: push
+
+jobs:
+  job1:
+    runs-on: ubuntu-lastest
+
+    steps:
+      - uses: action/checkout@v2
+      - name: run a shell script
+        run: echo hello from me
+
+  job2:
+    runs-on: ubuntu-lastest
+
+    steps:
+      - uses: action/checkout@v2
+      - name: run a shell script
+        run: echo world from me
