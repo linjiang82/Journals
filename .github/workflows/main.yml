@@ -19,8 +19,13 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    container:
-      image: node:8
+    services:
+      nginx:
+        image: nginx
+        ports:
+          - 8080:80
+        env:
+          NGINX_PORT: 80
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -29,6 +34,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: show node version
-        run: node --version
+        run: |
+          node --version
+          curl localhost:8080
 
       
