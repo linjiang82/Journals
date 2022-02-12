@@ -4,7 +4,7 @@ on: push
 
 jobs:
   job1:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
@@ -12,7 +12,7 @@ jobs:
         run: echo hello from me
 
   job2:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
