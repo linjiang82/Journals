@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-lastest
 
     steps:
-      - uses: action/checkout@v2
+      - uses: actions/checkout@v2
       - name: run a shell script
         run: echo hello from me
 
@@ -15,6 +15,6 @@ jobs:
     runs-on: ubuntu-lastest
 
     steps:
-      - uses: action/checkout@v2
+      - uses: actions/checkout@v2
       - name: run a shell script
         run: echo world from me
